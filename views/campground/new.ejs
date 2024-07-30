@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center">New Campground</h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label for="title" class="form-label">TITLE:</label>
+                    <input type="text" id="title" name="campground[title]" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="location" class="form-label">LOCATION:</label>
+                    <input type="text" name="campground[location]" id="location" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">IMAGE:</label>
+                    <input type="text" name="campground[image]" id="image" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Dsecription:</label>
+                    <textarea name="campground[description]" id="desciption" cols="10" rows="2" class="form-control"
+                        type="text" required></textarea>
+                </div>
+
+                <button class="btn btn-success">CREATE</button>
+            </form>
+            <a href="/campgrounds">Back To ALL CAMPGROUNDS</a>
+        </div>
+    </div>
+
+    
